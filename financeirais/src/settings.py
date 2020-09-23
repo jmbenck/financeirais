@@ -24,13 +24,14 @@ SECRET_KEY = 'vmnpq_(r@7@_+^(5w))cuzg6%=l)tjthbdt##g$*q#$i_au$6*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.227.191.252']
+ALLOWED_HOSTS = ['165.227.191.252', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'bootstrap4',
+    'financeiro.apps.SuitConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
