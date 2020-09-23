@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['165.227.191.252']
 # Application definition
 
 INSTALLED_APPS = [
-    'financeiro.apps.SuitConfig',
     'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
