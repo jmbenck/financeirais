@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprovante</title>
+</head>
+<body>
+<video>
+    {% for i in post%}
+    <img src="{{v.video.url}}">
+</video>
+{% endfor %}
+</body>
+</html>
