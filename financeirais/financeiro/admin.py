@@ -20,8 +20,9 @@ class ExportCsvMixin:
     export_as_csv.short_description = 'Exportar CSV'
 
 
-@admin.register(Movimentacao)
+
 class MovimentacaoAdmin(admin.ModelAdmin, ExportCsvMixin):
-    list_display = ('tipo', 'data_hora', 'descricao', 'valor', 'anexo')
-    list_filter = ('tipo', 'data_hora')
+    list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'anexo']
+    list_filter = ['tipo', 'data_hora']
     actions = ['export_as_csv']
+admin.site.register(Movimentacao, MovimentacaoAdmin)
