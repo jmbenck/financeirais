@@ -17,7 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from financeirais.financeiro.views import images_view
+from financeiro.views import images_view
 from src import settings
 
 admin.site.site_header = "Módulo FinanceirAIS"
