@@ -27,7 +27,7 @@ class MovimentacaoAdmin(admin.ModelAdmin, ExportCsvMixin):
     def img_tag(self, obj):
         return format_html('<img src="{}" >'.format(obj.anexo.url))
     img_tag.short_description = 'Imagem Comprovante'
-    list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'img_tag', 'anexo']
+    list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'anexo']
     list_filter = ['tipo', 'data_hora']
     actions = ['export_as_csv']
 admin.site.register(Movimentacao, MovimentacaoAdmin)
