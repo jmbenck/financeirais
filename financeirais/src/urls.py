@@ -21,6 +21,5 @@ admin.site.site_title = "Portal Administrativo FinanceirAIS"
 admin.site.index_title = "FinanceirAIS"
 
 urlpatterns = [
-    path('/', admin.site.urls),
     path('admin/', admin.site.urls),
 ]
