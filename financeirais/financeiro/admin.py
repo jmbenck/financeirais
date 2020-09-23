@@ -25,7 +25,7 @@ class ExportCsvMixin:
 class MovimentacaoAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     def img_tag(self, obj):
-        return format_html('<img src="{}" >'.format(obj.video.url))
+        return format_html('<img src="{}" >'.format(obj.url))
     img_tag.short_description = 'Imagem Comprovante'
     list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'img_tag', 'anexo']
     list_filter = ['tipo', 'data_hora']
