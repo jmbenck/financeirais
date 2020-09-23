@@ -12,5 +12,5 @@ class Movimentacao(models.Model):
         return str(self.data_hora)
 
     class Meta:
-        verbose_name = u'Movimentação'
-        verbose_name_plural = u'Movimentações'
+        verbose_name = 'Movimentação'
+        verbose_name_plural = 'Movimentações'
