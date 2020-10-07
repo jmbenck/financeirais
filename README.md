@@ -11,4 +11,5 @@ pip install django
 pip install mysqlclient
 pip install django-mysql
 pip install https://github.com/darklow/django-suit/tarball/v2
+pip install bootstrap4
 ```
