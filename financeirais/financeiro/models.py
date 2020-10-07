@@ -19,7 +19,7 @@ class Movimentacao(models.Model):
     valor = models.DecimalField(max_digits=10, decimal_places=2)
     anexo = models.FileField(upload_to='anexos/%Y/%m/', null=True, blank=True)
     descricao = models.CharField(max_length=150)
-    categoria = models.ForeignKey(Categoria, models.DO_NOTHING, null=True, blank=True)
+    categoria = models.ForeignKey(Categoria, models.DO_NOTHING)
 
     def __str__(self):
         return str(self.data_hora)
