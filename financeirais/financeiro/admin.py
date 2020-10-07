@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 
 from .models import Movimentacao
+from .models import Categoria
 
 
 class ExportCsvMixin:
@@ -27,7 +28,8 @@ class MovimentacaoAdmin(admin.ModelAdmin, ExportCsvMixin):
     def img_tag(self, obj):
         return format_html('<img src="{}" >'.format(obj.anexo.url))
     img_tag.short_description = 'Imagem Comprovante'
-    list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'anexo']
-    list_filter = ['tipo', 'data_hora']
+    list_display = ['tipo', 'data_hora', 'descricao', 'valor', 'anexo','categoria']
+    list_filter = ['tipo', 'data_hora', 'categoria']
     actions = ['export_as_csv']
 admin.site.register(Movimentacao, MovimentacaoAdmin)
+admin.site.register(Categoria)
